@@ -1,0 +1,5 @@
+Model\Desarrollador.class
+Model\Proyecto.class
+Model\Persona.class
+com\provajavafx\hibernateexample\HibernateExample.class
+Model\Tecnologia.class
