@@ -76,7 +76,7 @@ public class Tecnologia {
         this.proyectos = proyectos;
     }
    
-   public static void añadirTecnologia(SessionFactory sessionFactory){
+   public static void addTechnology(SessionFactory sessionFactory){
        Scanner scanner = new Scanner(System.in);
        System.out.println("Indica el nombre de la tecnología a añadir");
        String nombre = scanner.nextLine();

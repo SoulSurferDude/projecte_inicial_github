@@ -87,7 +87,7 @@ public class Desarrollador {
     
 
     
-    public static void añadirDesarrollador(SessionFactory sessionFactory) {
+    public static void addDeveloper(SessionFactory sessionFactory) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("--Añadir desarrollador--");
         System.out.println("Indica el nombre del desarrollador:");

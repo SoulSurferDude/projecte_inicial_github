@@ -107,7 +107,7 @@ public class Proyecto {
         this.desarrolladorAsignado = desarrolladorAsignado;
     }
 
-    public static void añadirProyecto(SessionFactory sessionFactory) {
+    public static void addProject(SessionFactory sessionFactory) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Indica el nombre:");

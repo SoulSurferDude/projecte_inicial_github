@@ -57,7 +57,7 @@ public class HibernateExample {
                             }
                             switch (opcion) {
                                 case 1 ->
-                                    Desarrollador.añadirDesarrollador(sessionFactory);
+                                    Desarrollador.addDeveloper(sessionFactory);
 
                                 case 2 ->
                                     Desarrollador.eliminarDesarrollador(sessionFactory);
@@ -94,7 +94,7 @@ public class HibernateExample {
                             }
                             switch (opcion) {
                                 case 1 ->
-                                    Proyecto.añadirProyecto(sessionFactory);
+                                    Proyecto.addProject(sessionFactory);
 
                                 case 2 ->
                                     Proyecto.eliminarProyecto(sessionFactory);
@@ -131,7 +131,7 @@ public class HibernateExample {
                             }
                             switch (opcion) {
                                 case 1 ->
-                                    Tecnologia.añadirTecnologia(sessionFactory);
+                                    Tecnologia.addTechnology(sessionFactory);
 
                                 case 2 ->
                                     Tecnologia.eliminarTecnologia(sessionFactory);
