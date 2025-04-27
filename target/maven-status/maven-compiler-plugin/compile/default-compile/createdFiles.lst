@@ -1,5 +1,7 @@
+Factory\ProyectoFactory.class
 Model\Desarrollador.class
-Model\Proyecto.class
-Model\Persona.class
-com\provajavafx\hibernateexample\HibernateExample.class
+Factory\TecnologiaFactory.class
 Model\Tecnologia.class
+Model\Proyecto.class
+Factory\DesarrolladorFactory.class
+com\provajavafx\hibernateexample\HibernateExample.class

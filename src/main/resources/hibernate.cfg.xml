@@ -19,7 +19,6 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Entitats -->
-        <mapping class="Model.Persona"/>
         <mapping class="Model.Desarrollador"/>
         <mapping class="Model.Proyecto"/>
         <mapping class="Model.Tecnologia"/>

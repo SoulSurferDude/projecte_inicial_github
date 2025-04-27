@@ -4,6 +4,7 @@
  */
 package Model;
 
+import Factory.DesarrolladorFactory;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Scanner;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
 
 /**
  *
@@ -44,6 +46,14 @@ public class Desarrollador {
         this.telefono = telefono;
     }
 
+       public Desarrollador(String nombre, String correo, String especialidad, String telefono, int edad) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.especialidad = especialidad;
+        this.telefono = telefono;
+       
+        
+    }
     public Long getId() {
         return id;
     }
@@ -102,11 +112,12 @@ public class Desarrollador {
             System.out.println("Rellena todos los campos");
             return;
         }            
-        Desarrollador nuevoDesarrollador = new Desarrollador(nombre, correo, especialidad, telefono);
+        Desarrollador dev = DesarrolladorFactory.crearDesarrollador(nombre, correo, especialidad,telefono);
+        
 
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-            session.save(nuevoDesarrollador);
+            session.save(dev);
             session.getTransaction().commit();
             System.out.println("Desarrollador añadido");
         } catch (Exception e) {
@@ -207,5 +218,9 @@ public class Desarrollador {
                 System.out.println("Error al modificar" + e.getMessage());
             }
         }
+    }
+
+    public boolean isEmpty() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

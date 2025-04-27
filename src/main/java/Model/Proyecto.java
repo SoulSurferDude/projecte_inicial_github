@@ -4,6 +4,7 @@
  */
 package Model;
 
+import Factory.ProyectoFactory;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +18,6 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
@@ -133,8 +133,9 @@ public class Proyecto {
                 System.out.println("No hay desarrollador con este ID");
                 return;
             }
+            ProyectoFactory factory = new ProyectoFactory(sessionFactory);
+            Proyecto nuevoProyecto = factory.crearProyecto(nombre, fecha, presupuesto, desarrollador);
             session.beginTransaction();
-            Proyecto nuevoProyecto = new Proyecto(nombre, fecha, presupuesto, desarrollador);
             session.persist(nuevoProyecto);
             session.getTransaction().commit();
             System.out.println("Proyecto añadido");
